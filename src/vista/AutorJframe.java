@@ -57,6 +57,11 @@ public class AutorJframe extends javax.swing.JFrame {
         jLabel5.setText("FECHA DE NACIMIENTO");
 
         textNombres.setText("jTextField1");
+        textNombres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textNombresActionPerformed(evt);
+            }
+        });
 
         textApellidos.setText("jTextField2");
 
@@ -172,8 +177,12 @@ public class AutorJframe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void textNombreArtisticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNombreArtisticoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_textNombreArtisticoActionPerformed
+
+    private void textNombresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNombresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textNombresActionPerformed
 
     /**
      * @param args the command line arguments
