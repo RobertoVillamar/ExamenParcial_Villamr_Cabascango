@@ -59,11 +59,13 @@ public class Autor extends Persona {
     }
 
     @Override
+
     public String toString() {
-        return super.toString(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return  super.toString()+"\n"+
+                "Nombre Artístico: " + getNombreArtistico() + "\n"
+                + "Biografía: " + getBiografia() + "\n"
+                + "Nacionalidad: " + getNacionalidad() + "\n"
+                + "Número de Libros: " + getNumeroLibros();
     }
-    
-    
-    
 
 }
