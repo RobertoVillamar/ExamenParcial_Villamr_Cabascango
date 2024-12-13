@@ -74,7 +74,7 @@ public class Libro implements Prestamo{
     
     @Override
     public String toString() {
-        return "Autor: " + getAutor().toString() + "\n"
+        return "Autor: " + getAutor().getNombreArtistico() + "\n"
                 +"ISBN :"+ getIdLibro()+"\n"
                 + "Título: " + getTitulo() + "\n"
                 + "Año de Lanzamiento: " + getAgnioLanzamiento() + "\n"
