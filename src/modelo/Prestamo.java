@@ -9,5 +9,5 @@ package modelo;
  * @author Roberto2022
  */
 public interface Prestamo {
-    boolean disponibilidad(int cantidadLibro);
+    String disponibilidad();
 }

@@ -11,7 +11,7 @@ package modelo;
 public class Libro implements Prestamo{
 
     private Autor autor;
-
+    private String idLibro;
     private String titulo;
     private int agnioLanzamiento;
     private int cantidadLibros;
@@ -20,12 +20,15 @@ public class Libro implements Prestamo{
 
     }
 
-    public Libro(Autor autor, String titulo, int agnioLanzamiento, int cantidadLibros) {
+    public Libro(Autor autor, String idLibro, String titulo, int agnioLanzamiento, int cantidadLibros) {
         this.autor = autor;
+        this.idLibro = idLibro;
         this.titulo = titulo;
         this.agnioLanzamiento = agnioLanzamiento;
         this.cantidadLibros = cantidadLibros;
     }
+
+
 
     public Autor getAutor() {
         return autor;
@@ -35,6 +38,15 @@ public class Libro implements Prestamo{
         this.autor = autor;
     }
 
+    public String getIdLibro() {
+        return idLibro;
+    }
+
+    public void setIdLibro(String idLibro) {
+        this.idLibro = idLibro;
+    }
+    
+    
     public String getTitulo() {
         return titulo;
     }
@@ -58,18 +70,24 @@ public class Libro implements Prestamo{
     public void setCantidadLibros(int cantidadLibros) {
         this.cantidadLibros = cantidadLibros;
     }
-
+    
+    
     @Override
     public String toString() {
         return "Autor: " + getAutor().toString() + "\n"
+                +"ISBN :"+ getIdLibro()+"\n"
                 + "Título: " + getTitulo() + "\n"
                 + "Año de Lanzamiento: " + getAgnioLanzamiento() + "\n"
                 + "Cantidad de Libros: " + getCantidadLibros();
     }
 
     @Override
-    public boolean disponibilidad(int cantidadLibro) {
-        return cantidadLibro > 0;
+    public String disponibilidad() {
+        if (this.cantidadLibros > 0){
+            return "Existen unidades disponibles";
+        }else{
+            return "No hay unidades disponibles";
+        }
     }
     
 }
