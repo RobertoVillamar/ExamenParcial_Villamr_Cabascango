@@ -63,7 +63,7 @@ public class Autor extends Persona {
     public String toString() {
         return  super.toString()+"\n"+
                 "Nombre Artístico: " + getNombreArtistico() + "\n"
-                + "Biografía: " + getBiografia() + "\n"
+                + "Biografía: " + "\n" + getBiografia() + "\n"
                 + "Nacionalidad: " + getNacionalidad() + "\n"
                 + "Número de Libros: " + getNumeroLibros();
     }
