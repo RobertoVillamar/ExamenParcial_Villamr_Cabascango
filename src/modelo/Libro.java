@@ -8,17 +8,15 @@ package modelo;
  *
  * @author ASUS
  */
-public class Libro {
+public class Libro implements Prestamo {
 
     private Autor autor;
-
     private String titulo;
     private int agnioLanzamiento;
     private int cantidadLibros;
-    
-    
-    public Libro(){
-        
+
+    public Libro() {
+
     }
 
     public Libro(Autor autor, String titulo, int agnioLanzamiento, int cantidadLibros) {
@@ -59,11 +57,18 @@ public class Libro {
     public void setCantidadLibros(int cantidadLibros) {
         this.cantidadLibros = cantidadLibros;
     }
-    
-     
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Autor: " + getAutor().toString() + "\n"
+                + "Título: " + getTitulo() + "\n"
+                + "Año de Lanzamiento: " + getAgnioLanzamiento() + "\n"
+                + "Cantidad de Libros: " + getCantidadLibros();
+    }
+
+    @Override
+    public boolean disponibilidad(int cantidadLibro) {
+        return cantidadLibro > 0;
+    }
+
 }
- 
